@@ -1,0 +1,29 @@
+---
+title: "simple_linear_model"
+author: "Mark Duncan"
+date: "11/4/2017"
+output: html_document
+---
+
+This is my first R Markdown document! 
+
+Let's load some data.
+
+```{r}
+library(datasets)
+data(airquality)
+summary(airquality)
+```
+
+Let's plot some scatterplots of the data.
+
+```{r}
+pairs(airquality)
+```
+
+Build a simple linear model for the data, using Solar.R, Wind, and Temp as the predictors for Ozone:
+
+```{r}
+lm_ozone <- lm(Ozone ~ Solar.R + Wind + Temp + Month, data = airquality)
+summary(lm_ozone)
+```
