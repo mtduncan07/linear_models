@@ -21,7 +21,7 @@ Let's plot some scatterplots of the data.
 pairs(airquality)
 ```
 
-Build a simple linear model for the data, using Solar.R, Wind, and Temp as the predictors for Ozone:
+Build a simple linear model for the data, using Solar.R, Wind, Temp, and Month as the predictors for Ozone:
 
 ```{r}
 lm_ozone <- lm(Ozone ~ Solar.R + Wind + Temp + Month, data = airquality)
